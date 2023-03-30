@@ -1,0 +1,41 @@
+.App {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.service-option ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    gap: 1rem;
+}
+
+.service-option ul li {
+  flex: 1 1 100%;
+  max-width: calc(50% - 0.5rem);
+}
+
+a{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+
+}
+
+a img {
+  flex: 1 1 100%;
+
+}
+
+figcaption {
+  flex: 1 1 100%;
+  display: flex;
+  justify-content: space-between;
+}
