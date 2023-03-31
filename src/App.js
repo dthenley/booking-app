@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './css/App.css';
+import Sidebar from './components/Sidebar';
 
 const services = [
   {
@@ -61,7 +62,10 @@ export default function App() {
       <h1>
         Booking App 
       </h1>
-      <aside>
+      <Sidebar
+        listOfSelectedServices = {userServices}
+      />
+      {/* <aside>
         <h2>Services</h2>
         <ul>
           {userServices.map(service=>
@@ -70,7 +74,7 @@ export default function App() {
             </li>
           )}
         </ul>
-      </aside>
+      </aside> */}
       <div className='service-option'>
         <h2>Pick Your Service</h2>
         <ul>
