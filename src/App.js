@@ -34,28 +34,42 @@ const services = [
   }
 ];
 
-
-const serviceList = services.map(service => 
+export default function App() {
+  const [userServices, setUserServices] = useState([]);
+  const serviceList = services.map(service => 
     <li key={service.id}>
         <ServiceCard
           id={service.id}
           name={service.name}
           price={service.price}
+          addService={()=>
+            setUserServices([
+              ...userServices,
+              {
+                id:service.id,
+                name:service.name,
+                price:service.price
+              }
+            ])
+          }
         />
     </li>
     );
 
-export default function App() {
-const [userServices, setUserServices] = useState([]);
-
   return (
     <div className="App">
       <h1>
-        Booking App
+        Booking App 
       </h1>
       <aside>
         <h2>Services</h2>
-
+        <ul>
+          {userServices.map(service=>
+            <li key={service.id} >
+              {service.name}
+            </li>
+          )}
+        </ul>
       </aside>
       <div className='service-option'>
         <h2>Pick Your Service</h2>
@@ -67,13 +81,10 @@ const [userServices, setUserServices] = useState([]);
   );
 }
 
-function ServiceCard({id, name, price}) {
-  const handleClick = () => {
-    console.log('clicked');
-  }
+function ServiceCard({id, name, price,addService}) {
   return(
     <figure
-        onClick={handleClick}
+        onClick={addService}
         name={name}
         test="donte"
         >

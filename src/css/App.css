@@ -22,14 +22,14 @@
   max-width: calc(50% - 0.5rem);
 }
 
-a{
+figure{
   display: flex;
   flex-wrap: wrap;
   margin: 0;
 
 }
 
-a img {
+figure img {
   flex: 1 1 100%;
 
 }
