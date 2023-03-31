@@ -35,7 +35,7 @@ const services = [
 export default function Services({handleServices}) {
 
     return(
-        <div>
+        <div className="service-options">
             <h2>Pick Your Service</h2>
             <ul>
                 {services.map(service=>

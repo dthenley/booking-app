@@ -15,15 +15,18 @@ export default function App() {
 
   return (
     <div className="App">
-      <h1>
-        Booking App 
-      </h1>
       <Sidebar
         listOfSelectedServices = {userServices}
-      />
-      <Services
-        handleServices = {handleServices}
-      />
+        />
+      <div >
+        <h1>
+          Booking App 
+        </h1>
+        <Services
+          handleServices = {handleServices}
+          />
+          
+        </div>
     </div>
   );
 }
