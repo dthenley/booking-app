@@ -65,16 +65,6 @@ export default function App() {
       <Sidebar
         listOfSelectedServices = {userServices}
       />
-      {/* <aside>
-        <h2>Services</h2>
-        <ul>
-          {userServices.map(service=>
-            <li key={service.id} >
-              {service.name}
-            </li>
-          )}
-        </ul>
-      </aside> */}
       <div className='service-option'>
         <h2>Pick Your Service</h2>
         <ul>
